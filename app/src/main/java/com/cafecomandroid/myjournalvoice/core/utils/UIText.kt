@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice.core.utils
+package com.cafecomandroid.myjournalvoice.core.utils
 
 import android.content.Context
 import androidx.annotation.StringRes

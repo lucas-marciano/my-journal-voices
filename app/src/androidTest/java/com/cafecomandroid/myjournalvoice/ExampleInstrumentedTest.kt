@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice
+package com.cafecomandroid.myjournalvoice
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

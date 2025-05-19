@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice.core.presentation.ui.theme
+package com.cafecomandroid.myjournalvoice.core.presentation.ui.theme
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.Composable

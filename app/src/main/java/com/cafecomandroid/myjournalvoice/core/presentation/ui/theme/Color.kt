@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice.core.presentation.ui.theme
+package com.cafecomandroid.myjournalvoice.core.presentation.ui.theme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color

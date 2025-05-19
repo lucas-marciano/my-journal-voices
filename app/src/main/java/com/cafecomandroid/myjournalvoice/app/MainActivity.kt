@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice.app
+package com.cafecomandroid.myjournalvoice.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,14 +11,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.cafecomandroid.myjornalvoice.core.presentation.ui.theme.MyJornalVoiceTheme
+import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoiceTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyJornalVoiceTheme {
+            MyJournalVoiceTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -41,7 +41,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    MyJornalVoiceTheme {
+    MyJournalVoiceTheme {
         Greeting("Android")
     }
 }

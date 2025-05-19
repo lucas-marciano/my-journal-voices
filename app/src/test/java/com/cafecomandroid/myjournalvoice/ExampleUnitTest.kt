@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice
+package com.cafecomandroid.myjournalvoice
 
 import org.junit.Test
 

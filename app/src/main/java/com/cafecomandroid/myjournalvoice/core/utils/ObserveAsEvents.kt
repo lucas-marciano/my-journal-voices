@@ -1,4 +1,4 @@
-package com.cafecomandroid.myjornalvoice.core.utils
+package com.cafecomandroid.myjournalvoice.core.utils
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
