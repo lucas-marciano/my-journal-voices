@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyJournalVoice</string>
+    <string name="title_voices">MyJournalVoice</string>
+    <string name="settings">Configurações</string>
+    <string name="message_moods_empty">Sem vozes para exibição</string>
+    <string name="message_moods_empty_sub">Grave suas primeiras mensagens no botão abaixo</string>
+    <string name="label_record_action">Click para começar a gravar</string>
 </resources>

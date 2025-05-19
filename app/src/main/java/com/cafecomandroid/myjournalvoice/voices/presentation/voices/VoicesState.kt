@@ -1,5 +1,8 @@
-package com.cafecomandroid.myjournalvoice.voices.presentation.voices 
+package com.cafecomandroid.myjournalvoice.voices.presentation.voices
+
 data class VoicesState(
-    val paramOne: String = "default",
-    val paramTwo: List<String> = emptyList(),
+    val hasVoicesRecorded: Boolean = false,
+    val hasActiveTopicFilters: Boolean = false,
+    val hasActiveMoodFilters: Boolean = false,
+    val isLoading: Boolean = false,
 )
