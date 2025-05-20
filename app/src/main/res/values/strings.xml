@@ -5,4 +5,14 @@
     <string name="message_moods_empty">Sem vozes para exibição</string>
     <string name="message_moods_empty_sub">Grave suas primeiras mensagens no botão abaixo</string>
     <string name="label_record_action">Click para começar a gravar</string>
+    <string name="stressed">Estressado</string>
+    <string name="sad">Triste</string>
+    <string name="neutral">Normal</string>
+    <string name="peaceful">Em paz</string>
+    <string name="excited">Empolgado</string>
+    <string name="create_entry">Criado \'%s\'</string>
+    <string name="all_moods">humor</string>
+    <string name="all_topics">hashtag</string>
+    <string name="clear_selections">Limpar</string>
+    <string name="message_no_topics_saved">Não há hashtags cadastradas</string>
 </resources>
