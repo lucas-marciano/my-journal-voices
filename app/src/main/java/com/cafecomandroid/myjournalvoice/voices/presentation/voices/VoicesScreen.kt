@@ -17,6 +17,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoiceTheme
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.bgGradient
+import com.cafecomandroid.myjournalvoice.voices.presentation.models.MoodUI
+import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoiceFilterRow
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesEmptyView
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesFloatingButton
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesTopBar
@@ -62,6 +64,17 @@ fun VoicesScreen(
                 )
                 .padding(paddingValue)
         ) {
+            VoiceFilterRow(
+                moodChipContent = state.moodChipContent,
+                hasActiveMoodFilter = state.hasActiveMoodFilters,
+                selectedVoiceFilterChip = state.selectedVoiceFilterChip,
+                moods = state.moods,
+                topics = state.topics,
+                topicChipTitle = state.topicChipTitle,
+                hasActiveTopicFilter = state.hasActiveTopicFilters,
+                onAction = { onAction(it) }
+            )
+
             when {
                 state.isLoading -> {
                     CircularProgressIndicator(
