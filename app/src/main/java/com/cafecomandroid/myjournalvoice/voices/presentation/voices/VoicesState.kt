@@ -13,11 +13,7 @@ data class VoicesState(
     val hasActiveMoodFilters: Boolean = false,
     val isLoading: Boolean = false,
     val moods: List<Selectable<MoodUI>> = emptyList(),
-    val topics: List<Selectable<String>> = listOf(
-        Selectable("internet"),
-        Selectable("amor"),
-        Selectable("familia")
-    ),
+    val topics: List<Selectable<String>> = emptyList(),
     val moodChipContent: MoodChipContent = MoodChipContent(),
     val selectedVoiceFilterChip: VoicesFilter? = null,
     val topicChipTitle: UiText = UiText.StringResource(R.string.all_topics),
