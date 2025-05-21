@@ -15,4 +15,7 @@
     <string name="all_topics">hashtag</string>
     <string name="clear_selections">Limpar</string>
     <string name="message_no_topics_saved">Não há hashtags cadastradas</string>
+    <string name="playing">Tocando\n</string>
+    <string name="paused">Parado</string>
+    <string name="stopped">Parado</string>
 </resources>
