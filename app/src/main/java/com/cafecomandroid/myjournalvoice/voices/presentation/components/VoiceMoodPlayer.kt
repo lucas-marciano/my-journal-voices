@@ -20,6 +20,7 @@ import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoi
 import com.cafecomandroid.myjournalvoice.core.utils.formatMMSS
 import com.cafecomandroid.myjournalvoice.voices.presentation.models.MoodUI
 import com.cafecomandroid.myjournalvoice.voices.presentation.models.PlaybackUI
+import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.TrackSizeInfo
 import kotlin.random.Random
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
@@ -37,7 +38,7 @@ fun VoiceMoodPlayer(
     modifier: Modifier = Modifier,
     amplitudeBarWidth: Dp = 5.dp,
     amplitudeBarSpacing: Dp = 4.dp,
-    onTrackSizeAvailable: () -> Float = { 0f }
+    onTrackSizeAvailable: (TrackSizeInfo) -> Unit
 ) {
     val formatedText = remember(durationPlayed, totalDuration) {
         "${durationPlayed.formatMMSS()} / ${totalDuration.formatMMSS()} "
@@ -99,7 +100,8 @@ private fun VoiceMoodPlayerPreview() {
             onPauseClick = {},
             onPlayClick = {},
             totalDuration = 250.seconds,
-            durationPlayed = 50.seconds
+            durationPlayed = 50.seconds,
+            onTrackSizeAvailable = { }
         )
     }
 }
