@@ -18,4 +18,5 @@
     <string name="playing">Tocando\n</string>
     <string name="paused">Parado</string>
     <string name="stopped">Parado</string>
+    <string name="show_more">Veja Mais</string>
 </resources>
