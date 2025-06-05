@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -20,14 +19,10 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoiceTheme
-import com.cafecomandroid.myjournalvoice.voices.presentation.models.MoodUI
-import com.cafecomandroid.myjournalvoice.voices.presentation.models.PlaybackUI
+import com.cafecomandroid.myjournalvoice.voices.presentation.util.PreviewModels.voiceUI
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.RelativePosition
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.TrackSizeInfo
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.VoiceUI
-import java.time.Instant
-import kotlin.random.Random
-import kotlin.time.Duration.Companion.seconds
 
 @Composable
 fun VoiceTimeLineItem(
@@ -85,23 +80,10 @@ private val noLineBottomIcon = Modifier.height(8.dp)
 @Preview
 @Composable
 private fun VoiceTimeLineItemPreview() {
-    val ratios = remember {
-        (1..30).map { Random.nextFloat() }
-    }
+
     MyJournalVoiceTheme {
         VoiceTimeLineItem(
-            voiceUI = VoiceUI(
-                id = 0,
-                moodUI = MoodUI.EXCITED,
-                title = "some audio",
-                recordAt = Instant.now(),
-                note = buildString { repeat(200) { append("hello ") } },
-                topics = listOf("love"),
-                amplitudes = ratios,
-                playbackTotalDuration = 250.seconds,
-                playbackCurrentDuration = 50.seconds,
-                playbackUI = PlaybackUI.PAUSED
-            ),
+            voiceUI = voiceUI,
             relativePosition = RelativePosition.BETWEEN,
             onPauseClick = {},
             onPlayClick = {},

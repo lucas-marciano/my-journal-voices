@@ -18,6 +18,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoiceTheme
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.bgGradient
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoiceFilterRow
+import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoiceList
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesEmptyView
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesFloatingButton
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.components.VoicesTopBar
@@ -91,6 +92,21 @@ fun VoicesScreen(
                             .weight(1f)
                             .fillMaxWidth()
                             .wrapContentSize(),
+                    )
+                }
+
+                else -> {
+                    VoiceList(
+                        sections = state.sectionsList,
+                        onPlayClick = { id ->
+                            onAction(VoicesAction.OnPlayVoiceClick(id))
+                        },
+                        onPauseClick = { id ->
+                            onAction(VoicesAction.OnPauseVoiceClick(id))
+                        },
+                        onTrackSizeAvailable = {
+                            onAction(VoicesAction.OnTrackSizeAvailable(it))
+                        }
                     )
                 }
             }

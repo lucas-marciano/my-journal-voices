@@ -1,6 +1,7 @@
 package com.cafecomandroid.myjournalvoice.voices.presentation.voices
 
 import com.cafecomandroid.myjournalvoice.voices.presentation.models.MoodUI
+import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.TrackSizeInfo
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.VoicesFilter
 
 sealed interface VoicesAction {
@@ -14,4 +15,7 @@ sealed interface VoicesAction {
     data object OnFabLongClick : VoicesAction
     data object OnSettingsClick : VoicesAction
     data class OnRemoveFilters(val filters: VoicesFilter) : VoicesAction
+    data class OnPlayVoiceClick(val idVoice: Int) : VoicesAction
+    data class OnPauseVoiceClick(val idVoice: Int) : VoicesAction
+    data class OnTrackSizeAvailable(val trackSize: TrackSizeInfo) : VoicesAction
 }
