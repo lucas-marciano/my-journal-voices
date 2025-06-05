@@ -19,4 +19,6 @@
     <string name="paused">Parado</string>
     <string name="stopped">Parado</string>
     <string name="show_more">Veja Mais</string>
+    <string name="today">Hoje</string>
+    <string name="yesterday">Ontem</string>
 </resources>

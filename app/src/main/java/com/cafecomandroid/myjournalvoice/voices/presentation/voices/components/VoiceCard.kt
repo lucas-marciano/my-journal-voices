@@ -19,13 +19,9 @@ import com.cafecomandroid.myjournalvoice.core.presentation.ui.chips.HashtagChip
 import com.cafecomandroid.myjournalvoice.core.presentation.ui.theme.MyJournalVoiceTheme
 import com.cafecomandroid.myjournalvoice.core.utils.defaultShadow
 import com.cafecomandroid.myjournalvoice.voices.presentation.components.VoiceMoodPlayer
-import com.cafecomandroid.myjournalvoice.voices.presentation.models.MoodUI
-import com.cafecomandroid.myjournalvoice.voices.presentation.models.PlaybackUI
+import com.cafecomandroid.myjournalvoice.voices.presentation.util.PreviewModels.voiceUI
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.TrackSizeInfo
 import com.cafecomandroid.myjournalvoice.voices.presentation.voices.models.VoiceUI
-import java.time.Instant
-import kotlin.random.Random
-import kotlin.time.Duration.Companion.seconds
 
 @Composable
 fun VoiceCard(
@@ -97,18 +93,7 @@ fun VoiceCard(
 private fun VoiceCardPreview() {
     MyJournalVoiceTheme {
         VoiceCard(
-            voiceUI = VoiceUI(
-                id = 0,
-                moodUI = MoodUI.PEACEFUL,
-                title = "some audio",
-                recordAt = Instant.now(),
-                note = buildString { repeat(200) { append("hello ") } },
-                topics = listOf("love"),
-                amplitudes = (1..30).map { Random.nextFloat() },
-                playbackTotalDuration = 250.seconds,
-                playbackCurrentDuration = 50.seconds,
-                playbackUI = PlaybackUI.PAUSED
-            ),
+            voiceUI = voiceUI,
             onTrackSizeAvailable = {},
             onPlay = {},
             onPause = {}
